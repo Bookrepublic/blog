@@ -47,26 +47,34 @@
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+# Slim
+Slim::Engine.set_options :format  => :html
+Slim::Engine.set_default_options :pretty => false
 
-set :js_dir, 'javascripts'
+# Reload the browser automatically whenever files change
+configure :development do
+  activate :livereload
+end
 
-set :images_dir, 'images'
+# Autoprefixer
+activate :autoprefixer do |config|
+  config.browsers = ['last 3 versions', 'Explorer >= 9']
+  config.cascade = true
+  config.inline = true
+end
+
+# Assetes
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+
+# Heroku
+set :build_dir, 'tmp'
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
-
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+  activate :minify_css
+  activate :minify_javascript
+  activate :asset_hash
+  activate :minify_html, remove_intertag_spaces: true
 end
