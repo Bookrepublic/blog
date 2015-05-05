@@ -3,9 +3,32 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.12"
+gem 'rack-contrib'
 
-# Live-reloading plugin
-gem "middleman-livereload", "~> 3.1.0"
+# Frontend
+
+gem 'slim'
+gem 'middleman-autoprefixer'
+gem 'sass'
+gem 'jquery-middleman'
+
+# Rails Assets
+source 'https://rails-assets.org' do
+  gem 'rails-assets-normalize-scss'
+end
+
+# Minify
+gem 'middleman-minify-html'
+
+# Image optimization
+gem 'image_optim'
+gem 'jpegoptim'
+gem 'middleman-imageoptim'
+
+# Development
+group :development do
+  gem "middleman-livereload", "~> 3.1.0"
+end
 
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
