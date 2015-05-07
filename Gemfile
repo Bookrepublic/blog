@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem "middleman", "~>3.3.12"
 gem 'rack-contrib'
 gem 'middleman-blog'
+gem "builder", "~> 3.0"
 
 # Frontend
 
@@ -15,7 +16,7 @@ gem 'jquery-middleman'
 
 # Rails Assets
 source 'https://rails-assets.org' do
-gem 'rails-assets-normalize-scss'
+  gem 'rails-assets-normalize-scss'
 end
 
 # Minify
@@ -28,7 +29,7 @@ gem 'middleman-imageoptim'
 
 # Development
 group :development do
-gem "middleman-livereload", "~> 3.1.0"
+  gem "middleman-livereload", "~> 3.1.0"
 end
 
 # For faster file watcher updates on Windows:

@@ -7,7 +7,9 @@ html
     title = current_page.data.title
     meta name="ROBOTS" content="NOODP"
     = stylesheet_link_tag 'application', media: 'all'
+    = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
 
   body class="= page_classes"
+    h1 Hello world
     = yield
     = javascript_include_tag "application"
