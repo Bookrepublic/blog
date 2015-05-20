@@ -84,6 +84,12 @@ activate :autoprefixer do |config|
   config.inline = true
 end
 
+###
+#Es6
+###
+
+activate :es6
+
 # Assetes
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'

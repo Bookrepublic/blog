@@ -13,6 +13,7 @@ gem 'slim'
 gem 'middleman-autoprefixer'
 gem 'sass'
 gem 'jquery-middleman'
+gem "middleman-es6", github: "vast/middleman-es6"
 
 # Rails Assets
 source 'https://rails-assets.org' do
