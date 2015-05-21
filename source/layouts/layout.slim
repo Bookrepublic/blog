@@ -10,6 +10,6 @@ html
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
 
   body class="= page_classes"
-    h1 Hello world
+    = partial 'shared/header'
     = yield
     = javascript_include_tag "application"
