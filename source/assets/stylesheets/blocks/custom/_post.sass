@@ -3,4 +3,37 @@
   +padding(2)
 
 .post__inner
-  background-color: blue
+  text-align: center
+
+  a
+    text-decoration: none
+
+.post__cover
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.post__cover--big
+  @extend .post__cover
+  +padding-top(10)
+  +padding-bottom(10)
+
+  +at-breakpoint(lap)
+    +padding-top(15)
+    +padding-bottom(15)
+
+  +at-breakpoint(desk)
+    +padding-top(20)
+    +padding-bottom(20)
+
+.post__category
+  color: $light-grey
+  text-transform: uppcase
+
+.post__title
+  font-family: $mega-font-family
+  font-weight: $mega-font-weight
+  +font-size(alpha)
+
+  +at-breakpoint(desk)
+    +font-size(mega)

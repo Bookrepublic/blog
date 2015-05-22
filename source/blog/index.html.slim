@@ -4,6 +4,11 @@ pageable: true
 per_page: 3
 ---
 
+.wrap
+  .grid
+    - blog.articles[11..-1].each do |article|
+      = article.title
+
 - if paginate && num_pages > 1
   p
     | Page 
