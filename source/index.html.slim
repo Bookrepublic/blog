@@ -2,52 +2,20 @@
 title: La home page
 ---
 
-- blog.articles.each_with_index do |article, i|
-  - if i == 0
-    .wrap
-      .post
-        .post__inner
-          .post__cover--big style="background-image:url('/images/fuoco_51.jpg')"
-          .post__meta
-            .post__categories
-              | Categoria
-            .post__title
-              h2
-                = link_to article.title, article
-            .post__author
-              | di Autore
-            .post__excerpt
-              = article.body
+.wrap
+  = partial 'partial/featured'
 
 .wrap
-  .grid
-    - data.book.book.each_with_index do |book, i|
-      - if i == 0
-        .grid__item.width-12-12.lap-6-12.post
-          .post
-            .post__inner
-              h3 = book
-    - data.people.librarian.each_with_index do |librarian, i|
-      - if i == 0
-        .grid__item.width-12-12.lap-6-12.post
-          .post
-            .post__inner
-              h3 = librarian
+  .shelf
+    = partial 'partial/weekly-book'
+    = partial 'partial/librarian'
 
 .wrap
-  .grid
-    - blog.articles[1..4].each do |article, i|
-      .grid__item.width-12-12.lap-6-12.post
-        .post
-          .post__inner
-            h3 = article.title
+  .shelf
+    = partial 'partial/first-blog'
 
 .slider
 
 .wrap
-  .grid
-    - blog.articles[5..10].each do |article, i|
-      .grid__item.width-12-12.lap-6-12.post.desk-4-12
-        .post
-          .post__inner
-            h3 = article.title
+  .shelf
+    = partial 'partial/second-blog'

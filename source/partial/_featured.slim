@@ -1,0 +1,15 @@
+- blog.articles.each_with_index do |article, i|
+  - if i == 0
+    .post
+      .post__inner
+        .post__cover--big style="background-image:url('/images/fuoco_51.jpg')"
+        .post__meta
+          .post__categories
+            | Categoria
+          .post__title
+            h2
+              = link_to article.title, article
+          .post__author
+            | di Autore
+          .post__excerpt
+            = article.body
