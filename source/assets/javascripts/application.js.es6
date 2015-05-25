@@ -1,3 +1,2 @@
 #= require jquery
-
-console.log("ciao");
+#= require modernizr

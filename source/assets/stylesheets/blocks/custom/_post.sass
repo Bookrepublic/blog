@@ -1,17 +1,19 @@
 .post
   +padding(2)
 
-.post__inner
-  text-align: center
-
   a
     text-decoration: none
+
+.post__inner
+  text-align: center
 
 .post__cover
   background-repeat: no-repeat
   background-position: center
   background-size: cover
   +vertical-padding(6)
+  transition: opacity .5s ease-in-out
+  opacity: 1
 
   +at-breakpoint(lap)
     +vertical-padding(7)
@@ -19,9 +21,12 @@
   +at-breakpoint(desk)
     +vertical-padding(8)
 
+  .no-touch .post:hover &
+    opacity: .75
+
 .post__cover--big
   @extend .post__cover
-  +vertical-padding(8)
+  +vertical-padding(9)
 
   +at-breakpoint(lap)
     +vertical-padding(12)

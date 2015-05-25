@@ -15,6 +15,7 @@ gem 'middleman-autoprefixer'
 gem 'sass'
 gem 'jquery-middleman'
 gem "middleman-es6", github: "vast/middleman-es6"
+gem 'rails-assets-modernizr'
 
 # Rails Assets
 source 'https://rails-assets.org' do

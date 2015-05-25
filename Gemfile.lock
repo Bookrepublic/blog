@@ -157,6 +157,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rails-assets-modernizr (2.8.3)
     rails-assets-normalize-scss (3.0.2)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
@@ -209,6 +210,7 @@ DEPENDENCIES
   middleman-minify-html
   nokogiri
   rack-contrib
+  rails-assets-modernizr
   rails-assets-normalize-scss!
   sass
   slim

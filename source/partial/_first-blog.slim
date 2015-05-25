@@ -1,18 +1,19 @@
 - blog.articles[1..4].each do |article, i|
   .shelf--50
-    .post
-      .post__inner
-        .post__cover style="background-image:url('/images/fuoco_51.jpg')"
-        .post__meta
-          .post__categories
-            | Categoria
-          .post__title role="index"
-            h2
-              = link_to article.title, article
-          .post__author role="index"
-            | di Autore
-          .post__excerpt
-            - if article.data.excerpt
-              = article.data.excerpt
-            - else
-              = article.summary(100, '...')
+    = link_to article do
+      .post
+        .post__inner
+          .post__cover style="background-image:url('/images/fuoco_51.jpg')"
+          .post__meta
+            .post__categories
+              | Categoria
+            .post__title role="index"
+              h2
+                = link_to article.title, article
+            .post__author role="index"
+              | di Autore
+            .post__excerpt
+              - if article.data.excerpt
+                = article.data.excerpt
+              - else
+                = article.summary(100, '...')

@@ -1,3 +1,30 @@
 .header
-  height: 150px
-  background-color: red
+
+.header__inner
+  display: flex
+  flex: nowrap
+  align-items: center
+  justify-content: space-between
+  +padding(2)
+
+.header__item
+  flex: 1
+  color: $light-grey
+  text-transform: uppercase
+  font-weight: $heading-font-weight
+  line-height: 2.0
+  letter-spacing: 0.1rem
+
+.header__item__logo
+  height: 50px
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  background-image: url('/images/logo-small.png')
+
+  +at-breakpoint(lap)
+    height: 70px
+
+  +at-breakpoint(desk)
+    background-image: url('/images/logo-bookrepublic-libreriecoop.png')
+    height: 130px
