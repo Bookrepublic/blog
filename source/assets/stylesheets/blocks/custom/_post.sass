@@ -11,19 +11,23 @@
   background-repeat: no-repeat
   background-position: center
   background-size: cover
+  +vertical-padding(6)
+
+  +at-breakpoint(lap)
+    +vertical-padding(7)
+
+  +at-breakpoint(desk)
+    +vertical-padding(8)
 
 .post__cover--big
   @extend .post__cover
-  +padding-top(8)
-  +padding-bottom(8)
+  +vertical-padding(8)
 
   +at-breakpoint(lap)
-    +padding-top(12)
-    +padding-bottom(12)
+    +vertical-padding(12)
 
   +at-breakpoint(desk)
-    +padding-top(17)
-    +padding-bottom(17)
+    +vertical-padding(17)
 
 .post__categories
   color: $light-grey
@@ -32,6 +36,7 @@
   letter-spacing: 0.1rem
   font-weight: $heading-font-weight
   line-height: 2.0
+  +font-size(epsilon)
 
 .post__title
   font-family: $mega-font-family
@@ -41,13 +46,19 @@
   +at-breakpoint(desk)
     +font-size(mega)
 
+.post__title[role="index"]
+  +font-size(alpha)
+
 .post__author
   font-family: $mega-font-family
-  +font-size(gamma)
+  +font-size(delta)
   line-height: 1.5
 
   +at-breakpoint(desk)
     line-height: 1.0
+
+.post__author[role="index"]
+  line-height: 1.5
 
 .post__content
   letter-spacing: .01em
@@ -58,7 +69,7 @@
 
 .post__excerpt
   @extend .post__content
-  +margin-top(3)
+  +margin-top(2)
   +font-size(delta)
 
 .post__excerpt[role="featured"]

@@ -12,4 +12,7 @@
           .post__author
             | di Autore
           .post__excerpt role="featured"
-            = article.body
+            - if article.data.excerpt
+              = article.data.excerpt
+            - else
+              = article.summary(200, '...')
