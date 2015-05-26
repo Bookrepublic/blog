@@ -10,6 +10,9 @@ html
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
 
   body class="= page_classes"
-    = partial 'shared/header'
-    = yield
-    = javascript_include_tag "application"
+  - locals = current_page.path.include?('post') ? {role: "post"} : {role: ""}
+  = partial 'shared/header', locals:locals
+  - if current_page.path.include?('post')
+    p ciao
+  = yield
+  = javascript_include_tag "application"

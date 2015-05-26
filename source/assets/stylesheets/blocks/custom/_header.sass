@@ -1,4 +1,9 @@
 .header
+  color: $light-grey
+
+.header[role="post"]
+  background-color: $blue
+  color: white
 
 .header__inner
   display: flex
@@ -9,22 +14,28 @@
 
 .header__item
   flex: 1
-  color: $light-grey
   text-transform: uppercase
   font-weight: $heading-font-weight
   line-height: 2.0
   letter-spacing: 0.1rem
 
 .header__item__logo
-  height: 50px
+  height: 30px
   background-size: contain
   background-repeat: no-repeat
   background-position: center
   background-image: url('/images/logo-small.png')
 
   +at-breakpoint(lap)
-    height: 70px
+    height: 50px
 
   +at-breakpoint(desk)
     background-image: url('/images/logo-bookrepublic-libreriecoop.png')
-    height: 130px
+    height: 120px
+
+.header__item__logo[role="post"]
+  height: 30px
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  background-image: url('/images/logo-small.png')
