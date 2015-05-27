@@ -1,8 +1,14 @@
 .post
-  +padding(2)
+  +horizontal-padding(2)
+  +vertical-padding(2)
 
   a
     text-decoration: none
+
+.post--post
+  @extend .post
+  +horizontal-padding(2)
+  +vertical-padding(0)
 
 .post__inner
   text-align: center
@@ -33,6 +39,12 @@
 
   +at-breakpoint(desk)
     +vertical-padding(17)
+
+.post__cover--post
+  @extend .post__cover--big
+
+  .no-touch .post:hover &
+    opacity: 1
 
 .post__categories
   color: $light-grey
@@ -65,20 +77,37 @@
 .post__author[role="index"]
   line-height: 1.5
 
-.post__content
+.post__text
   letter-spacing: .01em
   line-height: 1.6
   word-wrap: break-word
   outline: 0
+
+.post__content
+  @extend .post__text
+  +vertical-padding(3)
   +font-size(gamma)
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+
+  +at-breakpoint(desk)
+    width: 75%
+
+.post__divider
+  +padding-top(3)
+
+  &:before
+    content: "..."
 
 .post__excerpt
-  @extend .post__content
+  @extend .post__text
   +margin-top(2)
   +font-size(delta)
-
-.post__excerpt[role="featured"]
   width: 100%
+
+.post__excerpt--featured
+  @extend .post__excerpt
   margin-left: auto
   margin-right: auto
 

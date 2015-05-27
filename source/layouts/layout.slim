@@ -12,7 +12,5 @@ html
   body class="= page_classes"
   - locals = current_page.path.include?('post') ? {role: "post"} : {role: ""}
   = partial 'shared/header', locals:locals
-  - if current_page.path.include?('post')
-    p ciao
   = yield
   = javascript_include_tag "application"

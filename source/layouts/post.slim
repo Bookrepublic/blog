@@ -1,1 +1,19 @@
 = wrap_layout :layout do
+
+.wrap
+  .post--post
+    .post__inner
+      .post__cover--post style="background-image:url('/images/fuoco_51.jpg')" role="post"
+      .post__meta
+        .post__categories
+          | Categoria
+        .post__title
+          h2 = current_article.title
+        .post__author
+          | di Autore
+        - if current_article.data.excerpt
+          .post__excerpt--featured
+            = current_article.data.excerpt
+        .post__divider
+        .post__content
+          == yield

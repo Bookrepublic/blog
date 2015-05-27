@@ -12,7 +12,7 @@
                 = article.title
             .post__author
               | di Autore
-            .post__excerpt role="featured"
+            .post__excerpt--featured
               - if article.data.excerpt
                 = article.data.excerpt
               - else
