@@ -59,7 +59,8 @@
 
 .path-strip__books
   flex: 1
-  +padding(4)
+  +vertical-padding(7)
+  +horizontal-padding(4)
   overflow: hidden
 
 .path-strip__book
@@ -98,18 +99,6 @@
 
 .path-strip__description
   @extend .post__excerpt
-
-.path-strip--reverse
-  @extend .path-strip
-
-  .path-strip__inner
-    flex-direction: row-reverse
-
-  .path-strip__books
-    direction: rtl
-
-  .path-strip__book
-    direction: ltr
 
 +at-breakpoint(eq-palm)
   .path-strip__books

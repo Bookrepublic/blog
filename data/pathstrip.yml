@@ -8,3 +8,9 @@ collections:
       - title: Un secondo libro
         author: Stefano Verna
         ean: 9788844042684
+      - title: Un terzo libro
+        author: Giovanni Arnone
+        ean: 9788844042684
+      - title: Un quarto libro
+        author: Giovanni Arnone
+        ean: 9788844042684
