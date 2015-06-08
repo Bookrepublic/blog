@@ -1,6 +1,18 @@
-- data.people.librarian.each_with_index do |librarian, i|
+- data.librarian.librarian.each_with_index do |librarian, i|
   - if i == 0
     .shelf__33--container
-      .post
-        .post__inner
-          h3 = librarian
+      = link_to '#' do
+        .librarian
+          .librarian__inner
+            .librarian__photo
+              img src=librarian.photo
+            .librarian__content
+              .post__meta
+                .post__categories
+                  | I librai
+                .post__title--index
+                  h2 = librarian.name
+                .post__author--index
+                  = librarian.bookshop
+                .post__excerpt
+                  = librarian.excerpt

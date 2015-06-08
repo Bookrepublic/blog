@@ -1,0 +1,17 @@
+.librarian
+  margin-left: auto
+  margin-right: auto
+  width: 60%
+
+  +at-breakpoint(desk)
+    width: 80%
+
+  a
+    text-decoration: none
+
+.librarian__photo
+  transition: opacity .5s ease-in-out
+  opacity: 1
+
+  .no-touch .librarian:hover &
+    opacity: .75
