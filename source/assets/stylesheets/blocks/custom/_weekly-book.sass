@@ -5,6 +5,8 @@
     text-decoration: none
 
 .weekly-book__inner
+  +padding(1)
+  background-color: $light-beige
   width: 100%
   display: flex
   flex-wrap: wrap
@@ -17,3 +19,15 @@
 .weekly-book__content
   @extend .shelf__66--big
   text-align: center
+
+.weekly-book__cover--padding
+  +padding-left(5.5)
+  +padding-right(5.5)
+
+  +at-breakpoint(lap)
+    +padding-left(1)
+    +padding-right(1)
+
+.weekly-book__meta
+  +padding-left(1)
+  +padding-right(1)
