@@ -1,0 +1,10 @@
+collections:
+  - title: "Un bel titolino"
+    excerpt: "Questa è una sorta di percorso di lettura"
+    books:
+      - title: Un primo libro
+        author: Matteo Scurati
+        ean: 9788844042684
+      - title: Un secondo libro
+        author: Stefano Verna
+        ean: 9788844042684
