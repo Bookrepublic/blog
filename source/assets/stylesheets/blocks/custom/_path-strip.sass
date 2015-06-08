@@ -1,0 +1,161 @@
+.path-strip
+  text-decoration: none
+  display: block
+  position: relative
+  background-color: $light-azure
+  +vertical-margin(3)
+
+  &:after
+    content: ""
+    +position(absolute, null 0 0 0)
+    height: 1px
+    background-color: rgba(black, 0.2)
+
+.path-strip__infos
+  display: block
+  text-decoration: none
+  box-sizing: border-box
+  background-color: rgba(black, 0.3)
+  background-size: cover
+  background-position: center center
+  position: relative
+  align-self: stretch
+  color: white
+
+.path-strip__infos__inner
+  background-color: rgba(black, 0.3)
+  text-align: center
+  transition: background-color 0.2s ease-out
+
+  .no-touch .path-strip__infos:hover &
+    background-color: rgba(black, 0.4)
+
+.path-strip__infos__inner-2
+  +vertical-padding(5)
+
+.path-strip__title
+  @extend .post__title--index
+  +margin-bottom(2)
+  display: inline-block
+  position: relative
+
+  &:after
+    content: ""
+    display: block
+    height: 2px
+    background-color: white
+    transition: transform 0.2s ease-out
+    transform: scaleX(0)
+    +position(absolute, null 0 -2px 0)
+
+    .no-touch .path-strip__infos:hover &
+      transform: scaleX(1)
+
+.path-strip__actions
+  +margin-top(2)
+
+.path-strip__books__inner
+  width: 10000px
+
+.path-strip__books
+  flex: 1
+  +padding(4)
+  overflow: hidden
+
+.path-strip__book
+  display: inline-block
+  vertical-align: bottom
+  margin: 0 20px
+  width: 130px
+  position: relative
+
+.path-strip__book__cover
+  box-shadow: 0 2px 7px rgba(black, 0.3)
+  position: relative
+  top: 0
+  transition: top 0.3s cubic-bezier(.25, .15, .20, 1), box-shadow 0.3s cubic-bezier(.25, .15, .20, 1)
+  @extend .cover
+
+  .no-touch .path-strip__book:hover &
+    top: -70px
+    box-shadow: 0 20px 20px rgba(black, 0.4)
+
+.path-strip__book__title,
+.path-strip__book__author
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+.path-strip__book__title
+  font-weight: bold
+
+.path-strip__book__author
+  +font-size(smallprint)
+  color: $light-body-color
+
+.path-strip__book__meta
+  +position(absolute, null 0 0 0)
+
+.path-strip__description
+  @extend .post__excerpt
+
+.path-strip--reverse
+  @extend .path-strip
+
+  .path-strip__inner
+    flex-direction: row-reverse
+
+  .path-strip__books
+    direction: rtl
+
+  .path-strip__book
+    direction: ltr
+
++at-breakpoint(eq-palm)
+  .path-strip__books
+    display: none
+
+  .path-strip__infos__inner-2
+    +wrap
+
++at-breakpoint(lap)
+  .path-strip:after
+    background-color: $border-color
+
+  .path-strip__inner
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    align-items: center
+    align-content: center
+
+  .path-strip__infos
+    min-width: 390px
+    min-height: 250px
+
+  .path-strip__infos__inner
+    +position(absolute, 0 0 0 0)
+
+  .path-strip__infos__inner-2
+    width: 80%
+    margin-left: 10%
+    +center-vertically
+
++at-breakpoint(desk)
+  .path-strip__infos
+    min-width: 550px
+
+  .path-strip__book
+    width: 160px
+
+  .path-strip__books
+    +padding(7)
+
+  .path-strip__description
+    display: block
+    max-height: 9em
+    overflow: hidden
+
++at-breakpoint(wall)
+  .path-strip__books
+    +padding(9)
