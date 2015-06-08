@@ -1,0 +1,26 @@
+.book
+  display: block
+  text-decoration: none
+  position: relative
+  cursor: pointer
+
+  .no-touch &
+    position: relative
+    top: 0
+    transition: opacity 0.2s ease-out, max-height 0.2s ease-out, top 0.2s ease-out
+
+    &.is-loading
+      opacity: 0
+      top: -35px
+
+.book-excerpt__cover
+  box-shadow: 0 2px 7px rgba(black, 0.3)
+  position: relative
+  top: 0
+  transition: top 0.3s cubic-bezier(.25, .15, .20, 1), box-shadow 0.3s cubic-bezier(.25, .15, .20, 1)
+  +margin-bottom(1)
+  @extend .cover
+
+  .no-touch .book-excerpt:hover &
+    top: -10px
+    box-shadow: 0 10px 20px rgba(black, 0.2)

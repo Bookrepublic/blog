@@ -63,7 +63,8 @@
   +at-breakpoint(desk)
     +font-size(mega)
 
-.post__title[role="index"]
+.post__title--index
+  @extend .post__title
   +font-size(alpha)
 
 .post__author
@@ -74,7 +75,8 @@
   +at-breakpoint(desk)
     line-height: 1.0
 
-.post__author[role="index"]
+.post__author--index
+  @extend .post__author
   line-height: 1.5
 
 .post__text

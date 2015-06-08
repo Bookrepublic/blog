@@ -2,15 +2,7 @@
   display: flex
   flex-wrap: wrap
 
-.shelf--50
-  +margin-top(2)
-  flex: 1
-  flex: 0 0 100%
-
-  +at-breakpoint(lap)
-    flex: 0 0 50%
-
-.shelf--33
+.shelf__66
   +margin-top(2)
   flex: 1
   flex: 0 0 100%
@@ -19,4 +11,55 @@
     flex: 0 0 50%
 
   +at-breakpoint(desk)
+    flex: 0 0 66.3333%
+
+.shelf__66--container
+  @extend .shelf__66
+
+  +at-breakpoint(lap)
+    flex: 0 0 100%
+
+  +at-breakpoint(desk)
+    flex: 0 0 66.3333%
+
+.shelf__66--big
+  @extend .shelf__66
+
+  +at-breakpoint(lap)
+    flex: 0 0 66.3333%
+
+.shelf__50
+  +margin-top(2)
+  flex: 1
+  flex: 0 0 100%
+
+  +at-breakpoint(lap)
+    flex: 0 0 50%
+
+.shelf__33
+  +margin-top(2)
+  flex: 1
+  flex: 0 0 100%
+  justify-content: center
+  text-align: center
+
+  +at-breakpoint(lap)
+    flex: 0 0 50%
+
+  +at-breakpoint(desk)
+    flex: 0 0 33.3333%
+
+.shelf__33--container
+  @extend .shelf__33
+
+  +at-breakpoint(lap)
+    flex: 0 0 100%
+
+  +at-breakpoint(desk)
+    flex: 0 0 33.3333%
+
+.shelf__33--big
+  @extend .shelf__33
+
+  +at-breakpoint(lap)
     flex: 0 0 33.3333%
