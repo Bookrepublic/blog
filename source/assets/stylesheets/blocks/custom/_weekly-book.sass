@@ -1,8 +1,21 @@
 .weekly-book
   @extend .post
 
+  +at-breakpoint(lap)
+    transform: translateY(-55px)
+
   a
     text-decoration: none
+
+.weekly-book__thumbnail
+  display: none
+
+  +at-breakpoint(lap)
+    display: block
+    text-align: center
+
+    img
+      transform: translateY(55px)
 
 .weekly-book__inner
   background-color: $light-beige
@@ -10,7 +23,7 @@
   display: flex
   flex-wrap: wrap
   align-items: center
-  +vertical-padding(2)
+  +vertical-padding(3)
 
 .weekly-book__cover
   @extend .shelf__33--big
