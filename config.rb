@@ -50,6 +50,14 @@ page "/feed.xml", layout: false
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
 ###
+# Post
+###
+
+data.articles.articles.each do |post|
+  proxy "/consigli-di-lettura/#{post[:slug]}.html", "/consigli-di-lettura/consigli.html", ignore: true, locals: { p: post }
+end
+
+###
 # Helpers
 ###
 

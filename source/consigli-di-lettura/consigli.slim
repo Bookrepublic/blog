@@ -1,0 +1,18 @@
+.wrap
+  .post--post
+    .post__inner
+      .post__cover--post style="background-image:url('#{p.img}')" role="post"
+      .post__meta
+        .post__categories
+          = p.tags
+        .post__title
+          h2 = p.title
+        .post__author
+         | di 
+         = p.author
+        - if p.excerpt
+          .post__excerpt--featured
+            = p.excerpt
+        .post__divider
+        .post__content
+          = p.text
