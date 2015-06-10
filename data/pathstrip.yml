@@ -4,13 +4,26 @@ collections:
     books:
       - title: Un primo libro
         author: Matteo Scurati
-        ean: 9788844042684
+        editore: Utet
+        book: true
+        isbn: 9788851123093
       - title: Un secondo libro
         author: Stefano Verna
-        ean: 9788844042684
+        editore: Einaudi
+        book: true
+        isbn: 9788858419069
       - title: Un terzo libro
-        author: Giovanni Arnone
-        ean: 9788844042684
+        author: Claudio Rocco
+        editore: Bur
+        book: true
+        isbn: 9788858680483
       - title: Un quarto libro
-        author: Giovanni Arnone
-        ean: 9788844042684
+        author: Marco Minutoli
+        editore: Feltrinelli
+        book: true
+        isbn: 9788858821350
+      - title: Un quinto libro
+        author: Joe Yates
+        editore: NNE
+        book: true
+        isbn: 9788899253134
