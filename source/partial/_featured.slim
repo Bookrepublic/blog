@@ -1,19 +1,19 @@
-- blog.articles.each_with_index do |article, i|
+- data.articles.articles.each_with_index do |article, i|
   - if i == 0
-    = link_to article do
+    = link_to "/consigli-di-lettura/#{article.slug}.html" do
       .post
         .post__inner
-          .post__cover--big style="background-image:url('/images/fuoco_51.jpg')"
+          .post__cover--big style="background-image:url('#{article.img}')"
           .post__meta
             .post__categories
-              | Categoria
+              = article.tags
             .post__title
               h2
                 = article.title
             .post__author
               | di Autore
             .post__excerpt--featured
-              - if article.data.excerpt
-                = article.data.excerpt
+              - if article.excerpt
+                = article.excerpt
               - else
                 = article.summary(200, '...')

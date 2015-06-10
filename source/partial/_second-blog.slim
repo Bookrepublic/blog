@@ -1,9 +1,9 @@
-- blog.articles[5..10].each do |article, i|
+- data.articles.articles[5..10].each do |article, i|
   .shelf__33
-    = link_to article do
+    = link_to "/consigli-di-lettura/#{article.slug}.html" do
       .post
         .post__inner
-          .post__cover style="background-image:url('/images/fuoco_51.jpg')"
+          .post__cover style="background-image:url('#{article.img}')"
           .post__meta
             .post__categories
               | Categoria
@@ -13,7 +13,7 @@
             .post__author--index
               | di Autore
             .post__excerpt
-              - if article.data.excerpt
-                = article.data.excerpt
+              - if article.excerpt
+                = article.excerpt
               - else
                 = article.summary(100, '...')
