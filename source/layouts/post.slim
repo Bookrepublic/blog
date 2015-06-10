@@ -17,3 +17,13 @@
         .post__divider
         .post__content
           == yield
+          .featured-book
+            .featured-book__inner
+              .featured-book__cover
+                .book.weekly-book__cover--padding
+                  .book-excerpt
+                    .book-excerpt__cover
+                      img src="https://d1fo3lb3fr7a5u.cloudfront.net/proxy?url=http://alessandria.bookrepublic.it/api/books/9788898718214/cover?size=189x0"
+                  .featured-book__content
+                    .post__meta
+          == yield
