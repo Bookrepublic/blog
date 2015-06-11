@@ -2,14 +2,10 @@
   text-decoration: none
   display: block
   position: relative
-  background-color: $light-azure
+  //background-color: $light-azure
   +vertical-margin(3)
-
-  &:after
-    content: ""
-    +position(absolute, null 0 0 0)
-    height: 1px
-    background-color: rgba(black, 0.2)
+  border-top: 1px solid rgba(black, 0.2)
+  border-bottom: 1px solid rgba(black, 0.2)
 
 .path-strip__infos
   display: block
