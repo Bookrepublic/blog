@@ -1,23 +1,24 @@
 - data.book.book.each_with_index do |book, i|
   - if i == 0
     .shelf__66--container
-      .weekly-book
-        .weekly-book__thumbnail
-          img src="/images/book_week.png"
-        .weekly-book__inner
-          .weekly-book__cover
-            .book.weekly-book__cover--padding
-              .book-excerpt
-                .book-excerpt__cover
-                  img src="https://d1fo3lb3fr7a5u.cloudfront.net/proxy?url=http://alessandria.bookrepublic.it/api/books/9788898718214/cover?size=189x0"
-          .weekly-book__content
-            .weekly-book__meta
-              .weekly-book__title
-                h2 = book.title
-              .weekly-book__author
-                = book.author
-              .weekly-book__excerpt
-                - if book.excerpt
-                  = book.excerpt
-                - else
-                  = book.text(200, '...')
+      = link_to "/libro-della-settimana/#{book.slug}.html" do
+        .weekly-book
+          .weekly-book__thumbnail
+            img src="/images/book_week.png"
+          .weekly-book__inner
+            .weekly-book__cover
+              .book.weekly-book__cover--padding
+                .book-excerpt
+                  .book-excerpt__cover
+                    img src="/images/#{book.isbn}.jpg"
+            .weekly-book__content
+              .weekly-book__meta
+                .weekly-book__title
+                  h2 = book.title
+                .weekly-book__author
+                  = book.author
+                .weekly-book__excerpt
+                  - if book.excerpt
+                    = book.excerpt
+                  - else
+                    = book.text(200, '...')

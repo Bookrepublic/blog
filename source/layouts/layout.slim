@@ -9,7 +9,7 @@ html
     = stylesheet_link_tag 'application', media: 'all'
 
   body class="= page_classes"
-  - locals = current_page.path.include?('post') ? {role: "post"} : {role: ""}
+  - locals = current_page.path.include?( 'index' ) ? {role: ""} : {role: "post"}
   = partial 'shared/header', locals:locals
   = yield
   = javascript_include_tag "application"

@@ -1,0 +1,24 @@
+.wrap
+  .post--post
+    .post__inner--article
+      .post__cover--book
+        img src="/images/#{p.isbn}.jpg"
+      - if p.book == true
+        .post__button
+          | Acquistalo
+      .post__meta
+        .post__categories
+          = p.publisher
+        .post__title
+          h2 = p.title
+        .post__author
+         | di 
+         = p.author
+        .post__excerpt--featured
+          = p.excerpt
+        .post__divider
+        .post__content
+          = p.text
+        - if p.book == true
+          .post__button
+            | Acquistalo

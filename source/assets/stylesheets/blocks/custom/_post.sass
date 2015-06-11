@@ -9,7 +9,6 @@
   @extend .post
   +horizontal-padding(2)
   +vertical-padding(0)
-  +padding-top(2)
 
 .post__inner
   text-align: center
@@ -36,6 +35,9 @@
 
   .no-touch .post:hover &
     opacity: .75
+
+.post__cover--book
+  +vertical-padding(2)
 
 .post__cover--big
   @extend .post__cover
@@ -123,3 +125,9 @@
 
   +at-breakpoint(desk)
     width: 75%
+
+.post__button
+  @extend .button
+  +vertical-margin(2)
+  +font-size(delta)
+  border-radius: 3px

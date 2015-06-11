@@ -28,6 +28,14 @@ data.articles.articles.each do |post|
 end
 
 ###
+# Weekly book
+###
+
+data.book.book.each do |book|
+  proxy "/libro-della-settimana/#{book[:slug]}.html", "/libro-della-settimana/libro.html", ignore: true, locals: { p: book }
+end
+
+###
 # Helpers
 ###
 
