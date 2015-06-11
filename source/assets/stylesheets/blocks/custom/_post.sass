@@ -13,6 +13,12 @@
 .post__inner
   text-align: center
 
+.post__inner--article
+  text-align: left
+
+  +at-breakpoint(desk)
+    text-align: center
+
 .post__cover
   background-repeat: no-repeat
   background-position: center
@@ -92,6 +98,7 @@
   width: 100%
   margin-left: auto
   margin-right: auto
+  word-wrap: break-word
 
   +at-breakpoint(desk)
     width: 75%

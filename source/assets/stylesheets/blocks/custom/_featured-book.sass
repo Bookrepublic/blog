@@ -1,0 +1,40 @@
+.featured-book
+  border-top: 1px solid rgba(black, 0.2)
+  +vertical-padding(2)
+
+  a
+    text-decoration: none
+
+  +at-breakpoint(lap)
+    width: 80%
+    margin: 0 auto
+
+.featured-book__inner
+  @extend .weekly-book__inner
+
+.featured-book__cover
+  @extend .weekly-book__cover
+
+.featured-book__cover--padding
+  @extend .weekly-book__cover--padding
+
+.featured-book__content
+  @extend .weekly-book__content
+
+.featured-book__format
+  @extend .post__categories
+
+.featured-book__title
+  @extend .weekly-book__title
+
+.featured-book__author
+  @extend .weekly-book__author
+
+.featured-book__button
+  @extend .button
+  +vertical-margin(2)
+  +font-size(delta)
+  border-radius: 3px
+
+.featured__content
+  +padding-top(1)
