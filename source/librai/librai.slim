@@ -1,0 +1,44 @@
+.wrap
+  .post--post
+    .post__inner--article
+      .post__cover--book
+        img src="#{p.photo}"
+      .post__meta
+        .post__categories
+          | I librai
+        .post__title
+          h2 = p.name
+        .post__author
+         = p.bookshop
+        .post__excerpt--featured
+          = p.excerpt
+        .post__divider
+        .post__content
+          = p.biography
+        .post__title
+          h3 I suoi libri preferiti
+        - p.books.each do |book|
+          .post__content
+            .featured-book
+              .featured-book__inner
+                .featured-book__cover
+                  .book.featured-book__cover--padding
+                    .book-excerpt
+                      .book-excerpt__cover
+                        img src="/images/#{book.isbn}.jpg"
+                .featured-book__content
+                  .featured-book__meta
+                    .featured-book__format
+                      - if book.book == true
+                        | Libro
+                      - else
+                        | ebook
+                    .featured-book__title
+                      = book.title
+                    .featured-book__author
+                      | di 
+                      = book.author
+                    .featured-book__button
+                      | Ciao
+              .featured__content
+                = book.text

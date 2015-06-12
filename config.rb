@@ -36,6 +36,14 @@ data.book.book.each do |book|
 end
 
 ###
+# Librarian
+###
+
+data.librarian.librarian.each do |librai|
+  proxy "/librai/#{librai[:slug]}.html", "/librai/librai.html", ignore: true, locals: { p: librai }
+end
+
+###
 # Helpers
 ###
 

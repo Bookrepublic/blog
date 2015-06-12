@@ -1,7 +1,7 @@
 - data.librarian.librarian.each_with_index do |librarian, i|
   - if i == 0
     .shelf__33--container
-      = link_to '#' do
+      = link_to "/librai/#{librarian.slug}.html" do
         .librarian
           .librarian__inner
             .librarian__photo
