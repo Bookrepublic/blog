@@ -23,8 +23,16 @@
 # Post
 ###
 
+data.pathstrip.collections.each do |coll|
+  proxy "/consigli-di-lettura/#{coll[:slug]}.html", "/consigli-di-lettura/percorsi.html", ignore: true, locals: { p: coll }
+end
+
+###
+# Consigli
+###
+
 data.articles.articles.each do |post|
-  proxy "/consigli-di-lettura/#{post[:slug]}.html", "/consigli-di-lettura/consigli.html", ignore: true, locals: { p: post }
+  proxy "/consigli-di-lettura/#{post[:slug]}.html", "/consigli-di-lettura/percorsi.html", ignore: true, locals: { p: post }
 end
 
 ###

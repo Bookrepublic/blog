@@ -1,21 +1,22 @@
 - data.pathstrip.collections.each_with_index do |collection, i|
   - if i == 0
-    .path-strip
-      .path-strip__inner
-        .path-strip__infos style="background-image:url('/images/sweden.jpg')"
-          .path-strip__infos__inner
-            .path-strip__infos__inner-2
-              .path-strip__title = collection.title
-              .path-strip__description
-                = collection.excerpt
-        .path-strip__books
-          .path-strip__books__inner
-            - collection.books.each do |book|
-              .path-strip__book
-                .path-strip__book__meta
-                  .path-strip__book__title
-                    = book.title
-                  .path-strip__book__author
-                    .span = book.author
-                .path-strip__book__cover
-                  img src="/images/#{book.isbn}.jpg" alt="#{book.title}" title="#{book.title}"
+    = link_to "/consigli-di-lettura/#{collection.slug}.html" do
+      .path-strip
+        .path-strip__inner
+          .path-strip__infos style="background-image:url('/images/sweden.jpg')"
+            .path-strip__infos__inner
+              .path-strip__infos__inner-2
+                .path-strip__title = collection.title
+                .path-strip__description
+                  = collection.excerpt
+          .path-strip__books
+            .path-strip__books__inner
+              - collection.books.each do |book|
+                .path-strip__book
+                  .path-strip__book__meta
+                    .path-strip__book__title
+                      = book.title
+                    .path-strip__book__author
+                      .span = book.author
+                  .path-strip__book__cover
+                    img src="/images/#{book.isbn}.jpg" alt="#{book.title}" title="#{book.title}"
