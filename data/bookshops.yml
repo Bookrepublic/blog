@@ -1,0 +1,50 @@
+region:
+  - name: Lombardia
+    bookshop:
+      - name: Centro Commerciale Gran Rondò
+        slug: centro-commerciale-grand-rondo
+        city: Crema
+        address: via G. La Pira, 12 - 26013
+        phone: "051.220131"
+        photo: '/images/'
+        hours:
+          - week: "lunedì - giovedì: 9.00 - 20.00\nvenerdì: 9.00 - 22.00"
+            weekend: "sabato: 8.30 - 20.00\ndomenica: 9.00 - 20.00"
+        librarian:
+          - name: Claudio Rocco
+      - name: Nautilus
+        slug: nautilus
+        city: Mantova
+        address: piazza Ottantesima Fanteria, 19 - 46100
+        phone: "0376.360414"
+        photo: '/images/'
+        hours:
+          - week: "lunedì-sabato: 9.00 - 19.30"
+            weekend: "domenica: 10.00 - 13.00 / 16.00 - 19.00"
+        librarian:
+          - name: Claudio Rocco
+          - name: Matteo Scurati
+  - name: Emilia Romagna
+    bookshop:
+      - name: Ambasciatori
+        slug: ambasciatori
+        city: Bologna
+        address: via Orefici, 19 - 40100
+        phone: "051.220131"
+        photo: '/images/ambasciatori.jpg'
+        hours:
+          - week: "lunedì-sabato: 9.00 - 24.00"
+            weekend: "domenica: 10.00 - 24.00"
+        librarian:
+          - name: Claudio Rocco
+      - name: Centro Commerciale Centro Borgo
+        slug: centro-commerciale-centro-borgo
+        city: Bologna
+        address: via Marco Emilio Lepido, 186 - 40132
+        phone: "051.404903"
+        photo: '/images/'
+        hours:
+          - week: "lunedì-sabato: 9.00 - 21.00"
+            weekend: "domenica: 10.00 - 21.00"
+        librarian:
+          - name: Claudio Rocco

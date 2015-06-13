@@ -1,13 +1,14 @@
 .post
-  +horizontal-padding(2)
   +vertical-padding(2)
+
+  +at-breakpoint(lap)
+    +horizontal-padding(2)
 
   a
     text-decoration: none
 
 .post--post
   @extend .post
-  +horizontal-padding(2)
   +vertical-padding(0)
 
 .post__inner
@@ -71,6 +72,22 @@
 
   +at-breakpoint(desk)
     +font-size(mega)
+
+.post__title--beta
+  font-family: $mega-font-family
+  font-weight: $mega-font-weight
+  +font-size(gamma)
+
+  +at-breakpoint(desk)
+    +font-size(beta)
+
+.post__title--gamma
+  font-family: $mega-font-family
+  font-weight: $mega-font-weight
+  +font-size(delta)
+
+  +at-breakpoint(desk)
+    +font-size(gamma)
 
 .post__title--index
   @extend .post__title

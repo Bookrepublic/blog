@@ -1,0 +1,50 @@
+.bookshop
+  @extend .post--post
+
+.bookshop__item
+  @extend .bookshop
+  +margin-top(2)
+
+.bookshop__inner
+  @extend .post__inner--article
+
+.bookshop__title
+  @extend .post__title
+
+.bookshop__title--beta
+  @extend .post__title--beta
+
+.bookshop__title--gamma
+  @extend .post__title--gamma
+
+.bookshop__meta
+  @extend .post__author
+
+.bookshop__cover
+  @extend .post__cover
+
+.bookshop__divider
+  @extend .post__divider
+  text-align: center
+  +padding-bottom(3)
+
+.bookshop__shelf
+  @extend .shelf--center
+
+  +at-breakpoint(desk)
+    justify-content: center
+
+.bookshop__librarian
+  @extend .shelf__25
+
+  a
+    text-decoration: none
+
+  img
+    width: 80%
+
+    +at-breakpoint(lap)
+      width: 60%
+
+    +at-breakpoint(desk)
+      width: 50%

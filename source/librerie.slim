@@ -1,0 +1,32 @@
+.wrap
+  - data.bookshops.region.sort{ |r1, r2| r1.name <=> r2.name }.each do |reg|
+    .bookshop
+      .bookshop__inner
+        .bookshop__title
+          h2 = reg.name
+    - reg.bookshop.each do |bs|
+      .bookshop__item
+        .bookshop__inner
+          .bookshop__title--beta
+            h3 = bs.name
+        .bookshop__inner.space--bottom-1
+          .bookshop__cover style="background-image:url('#{bs.photo}')" role="bookshop"
+          .bookshop__meta.space--top-2
+            p = bs.city
+            p = bs.address
+            - bs.hours.each do |h|
+              p = simple_format(h.week)
+            p = bs.phone
+            p = bs.mail
+          - if bs.librarian
+            .bookshop__title--gamma.space--top-3
+              | I librai:
+          - bs.librarian.each do |lib|
+            .bookshop__shelf
+              - data.librarian.librarian.each do |li|
+                - if lib.name == li.name
+                  .bookshop__librarian
+                    = link_to "/librai/#{li.slug}.html" do
+                      img src="#{li.photo}" alt="#{li.name}" title="#{li.name}"
+                      p = li.name
+    .bookshop__divider
