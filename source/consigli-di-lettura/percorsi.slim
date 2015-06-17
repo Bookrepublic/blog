@@ -17,5 +17,5 @@
         .post__content
           = p.text
         - p.books.each do |book|
-          .post__content data-book-code="#{ book.ebook ? book.isbn : nil}"
+          .post__content data-book-code="#{ book.isbn if book.ebook}"
             = partial('partial/featured-book', locals: { book: book })
