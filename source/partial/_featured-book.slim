@@ -1,0 +1,24 @@
+.featured-book
+  .featured-book__inner
+    .featured-book__cover
+      .book.featured-book__cover--padding
+        .book-excerpt
+          .book-excerpt__cover
+            img src="/images/#{book.isbn}.jpg"
+    .featured-book__content
+      .featured-book__meta
+        .featured-book__format
+          - if book.book == true
+            | Libro
+          - else
+            | ebook
+        .featured-book__title
+          = book.title
+        .featured-book__author
+          = book.author
+        .featured-book__price
+          = book.price
+        - if book.ebook
+          .featured-book__button
+  .featured__content
+    = book.text
