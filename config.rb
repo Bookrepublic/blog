@@ -1,3 +1,4 @@
+require 'uglifier'
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -97,13 +98,11 @@ set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 
-# Heroku
-#set :build_dir, 'tmp'
-
 # Build-specific configuration
 configure :build do
   activate :minify_css
-  activate :minify_javascript
-  activate :asset_hash
+  activate :minify_javascript, compressor: Uglifier.new( comments: :none )
+  activate :gzip
+  #activate :asset_hash
   activate :minify_html, remove_intertag_spaces: true
 end

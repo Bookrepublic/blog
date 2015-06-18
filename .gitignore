@@ -22,3 +22,6 @@ node_modules/*
 
 #Ignore TMP
 tmp/*
+
+#Env
+.env
