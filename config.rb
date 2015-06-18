@@ -98,7 +98,7 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 
 # Heroku
-set :build_dir, 'tmp'
+#set :build_dir, 'tmp'
 
 # Build-specific configuration
 configure :build do

@@ -3,7 +3,6 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.12"
-gem 'rack-contrib'
 gem "builder", "~> 3.0"
 gem 'nokogiri'
 
